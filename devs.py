@@ -1,7 +1,7 @@
 import subprocess as sb
 import json
 
-hubs = open ('/Users/tim/Google Drive File Stream/My Drive/Colab Notebooks/battery/hubs').readlines ()
+hubs = open ('hubs').readlines ()
 
 from_battery = ["""
 5a8eef6b0446f007bd4eff0d
@@ -149,7 +149,7 @@ def devs_for_hub_from_live (h):
             for d in slot['devices']:
                 print ("physical", d['uuid'], d['model'])
                 #devs.append (d['uuid'])
-            if all (('power' not in slot ['deviceType'], 'pressure' not in slot ['deviceType'])):   # ignore power meters for battery stuff
+            if all (('power' not in slot ['deviceType'], 'pressure' not in slot ['deviceType'])):   # ignore power meters and BCGs for battery stuff
                 print (slot['uuid'], slot ['deviceType'])
                 devs.append (slot['uuid'])
     return cust ['residence'][0]['fn'], devs
@@ -188,7 +188,3 @@ for k in from_excel.keys ():
     print ("current not historical", len (set (from_live [k]).difference (set (from_excel[k].devs))))
 
 
-"""
-#print (devs)
-#print (x.devs)
-"""
