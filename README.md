@@ -21,6 +21,4 @@ There is a Rakefile to press a `pdf` from the ipynb, but that requires an instal
 
 There's still some tidying up to get to data that's of a reasonable quality to make any assertions about, I think.
 
-here's the curl pipeline to grab details of a hub and associated deviceslots from its clientid:
 
-# curl --header "Content-Type: application/json" https://homeinstead.anthropos.io/PumpHouse/rest/v1/iot/users/5b225850c7fe056c9624783c/residences | jq '.residence[].locations[].deviceSlots[].devices[]' > 5b2259aac7fe056c962480d
