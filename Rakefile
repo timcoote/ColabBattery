@@ -25,5 +25,3 @@ rule '.pdf' => ['.ipynb'] do |t|
 #    `sed -i -e 's/\documentclass\\[11pt\\]\{article\}/\documentclass[10pt,a3paper,landscape]{article}/'  "#{texfn}"`
     `xelatex "#{texfn}"`
 end
-
-# curl --header "Content-Type: application/json" https://homeinstead.anthropos.io/PumpHouse/rest/v1/iot/users/5b225850c7fe056c9624783c/residences | jq '.residence[].locations[].deviceSlots[].devices[]' > 5b2259aac7fe056c962480d
