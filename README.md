@@ -1,12 +1,16 @@
 This repo contains a jupyter notebook that is intended to run either in a local repo on a laptop, or in a colab notebook. The intention
 is to use colab to produce easily shareable analysis of data sets such as `battery analysis.xlsx`, as produced by pumphouse.
 
-The program `devs.py` includes a list of hubs and associated devices as spat out by a version of Simple_Battery_Analysis.ipynb, based
-on what that notebook found in `battery analysis.xlsx`. I'm not sure that it makes total sense to put `devs.py` into a separate
-program, invoking it as embedded in the notebook.
+The colab process, although it's nominally integrated with the GDrive funcitonality, does not seem to be able to get files from there
+automatically, and the UI reports versions that are not current. Therefore, the proposed way of working with colab is as follows:
 
-`devs.py` ignores devices that are power sockets (and so have no battery level to support). 
-
+1/ checkout the repo into a local directory
+2/ run colab in a browser `https://colab.research.google.com`
+3/ select the notebook from the checked out directory
+4/ run it, and upload the `battery analysis.xlsx` data set
+5/ modify the notebook as appropriate
+6/ ensure that the changes are downloaded to the checked out local directory
+7/ `git add`, `git commit` `git push` to put the changes back into the shared revision control
 
 It checks this list against what pumphouse tells it and identifies common, historical only (ie there's battery reports from some time
 but pumphouse doesn't report the device slot), and current only (battery never reported by this device).
