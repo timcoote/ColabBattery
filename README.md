@@ -6,7 +6,7 @@ automatically, and the UI reports versions that are not current. Therefore, the 
 
 1/ checkout the repo into a local directory
 2/ run colab in a browser `https://colab.research.google.com`
-3/ select the notebook from the checked out directory
+3/ upload the notebook from the checked out directory
 4/ run it, and upload the `battery analysis.xlsx` data set
 5/ modify the notebook as appropriate
 6/ ensure that the changes are downloaded to the checked out local directory
