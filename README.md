@@ -6,27 +6,27 @@ automatically, and the UI reports versions that are not current. For simplicity 
 
 It is initially envisaged that the workflow would be:
 
-1/ run colab in a browser `https://colab.research.google.com
-2/ select File -> Open notebook
-3/ in the dialog box, select Github, and unselect "Include private repos" (this avoids entering credentials for github)
-4/ Enter 'https://github.com/timcoote/ColabBattery' into the search line. This will find the notebook: `Simple_Battery_Analysis.ipynb`
-5/ Click the upload button to the right of the notebook's name
-6/ Select `Runtime` -> `Run all`, and the `Run Anyway` button.
-7/ Confirm that the notebook runs
-8/ Updating the git repo will require establishing a new repo as a fork of the original, after that learning curve has been climbed.
+1. run colab in a browser `https://colab.research.google.com
+2. select File -> Open notebook
+3. in the dialog box, select Github, and unselect "Include private repos" (this avoids entering credentials for github)
+4. Enter 'https://github.com/timcoote/ColabBattery' into the search line. This will find the notebook: `Simple_Battery_Analysis.ipynb`
+5. Click the upload button to the right of the notebook's name
+6. Select `Runtime` -> `Run all`, and the `Run Anyway` button.
+7. Confirm that the notebook runs
+8. Updating the git repo will require establishing a new repo as a fork of the original, after that learning curve has been climbed.
 In the meantime, I'd anticipate downloading and emailing the notebooks.
 
 
 However,
 the proposed way of working with colab after familiarity is establised with the tools is as follows:
 
-1/ checkout the repo into a local directory
-2/ run colab in a browser `https://colab.research.google.com`
-3/ upload the notebook from the checked out directory
-4/ run it, and upload the `battery analysis.xlsx` data set
-5/ modify the notebook as appropriate
-6/ ensure that the changes are downloaded to the checked out local directory
-7/ `git add`, `git commit` `git push` to put the changes back into the shared revision control
+1. checkout the repo into a local directory
+2. run colab in a browser `https://colab.research.google.com`
+3. upload the notebook from the checked out directory
+4. run it, and upload the `battery analysis.xlsx` data set
+5. modify the notebook as appropriate
+6. ensure that the changes are downloaded to the checked out local directory
+7. `git add`, `git commit` `git push` to put the changes back into the shared revision control
 
 It checks this list against what pumphouse tells it and identifies common, historical only (ie there's battery reports from some time
 but pumphouse doesn't report the device slot), and current only (battery never reported by this device).
